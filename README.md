@@ -1,10 +1,11 @@
-# ASMK
+# Aggregated Selective Match Kernels (ASMK) for Image Retrieval
 
 This is a Matlab package that we provide to reproduce the results 
 of our ICCV paper (paper homepage: http://hal.inria.fr/docs/00/86/46/84/PDF/iccv13_tolias.pdf).
 This code implements the ASMK* method, which offers the best trade-off between 
 search accuracy and resource requirements (memory and speed).
 
+```
 @InProceedings{TAJ13,
   author       = "Giorgos Tolias and Yannis Avrithis and Herv\'e J\'egou",
   title        = "To aggregate or not to aggregate: Selective match kernels for image search",
@@ -13,7 +14,7 @@ search accuracy and resource requirements (memory and speed).
   year         = "2013",
   url          = "http://hal.inria.fr/docs/00/86/46/84/PDF/iccv13_tolias.pdf"
 }
-
+```
 
 # Prerequisites
 
@@ -48,6 +49,7 @@ https://github.com/gtolias/asmk
 
 
 2) Compile the Matlab interface of yael. In linux, this can be done as: 
+```
 > tar xvzf yael_v366.tar.gz
 > rm yael_v366.tar.gz
 > mv yael_v366 yael
@@ -56,10 +58,13 @@ https://github.com/gtolias/asmk
 > cd matlab
 > make
 > cd ../..
+```
 
 Alternately, you can also try the new Make.m file to compile directly from Matlab
+```
 > matlab
 >> Make
+```
 
 If this does not work on your platform, please take a look at the README 
 file and the Yael getting started manual. Note that you might face other 
@@ -68,10 +73,12 @@ multi-threading. If such problems occur, consider deactivating multi-threading.
 
 
 3) Get the SIFT descriptors associated with the Oxford database
+```
 > cd asmk
 > wget -nH --cut-dirs=4 -r -Pdata/ ftp://ftp.irisa.fr/local/texmex/corpus/iccv2013/
-
+```
 
 4) Launch the test program in matlab:
+```
 >> test_asmk
-
+```
