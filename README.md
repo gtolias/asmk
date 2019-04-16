@@ -32,13 +32,18 @@ The prerequisites are automatically downloaded when running the main scripts.
 
 To reproduce the experiments in our ICCV 2013 paper using Hessian Affine features and
 SIFT descriptors launch the test program in matlab:
+```
 >> test_asmk
+```
 
 # Running (2018)
 
 To reproduce the experiments in our CVPR 2018 paper using [DELF](https://arxiv.org/abs/1612.06321) descriptors 
 launch the following commands in matlab:
+
+```
 >> cd revisitop
 >> setup
 >> create_index
 >> search_index
+```
