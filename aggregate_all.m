@@ -8,6 +8,9 @@
 %  da aggregated descriptors (concatenated for all images)
 %  va unique visual words for each image (concatenated for all images)
 %  na number of features per image after aggregation
+%
+% Authors: G. Tolias, Y. Avrithis, H. Jegou. 2013. 
+%
 function [va, da, na] = aggregate_all (v, d, n)
 	
 cs = [1 cumsum( double (n)) + 1];

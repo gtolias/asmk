@@ -6,6 +6,9 @@
 %  nf    input vector with number of features per image 
 %  idf   idf values
 %  normf normalization factors
+%
+% Authors: G. Tolias, Y. Avrithis, H. Jegou. 2013. 
+%
 function normf = compute_norm_factor (vidx, nf, idf)
 
 cs = [1 cumsum( double (nf)) + 1];

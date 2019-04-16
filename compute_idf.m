@@ -5,6 +5,9 @@
 %   vidx  input vector with visual words (concatenated for all images)
 %   nf    input vector with number of features per image
 %   k     number of visual words
+%
+% Authors: G. Tolias, Y. Avrithis, H. Jegou. 2013. 
+%
 function idf = compute_idf (vidx, nf, k)
 
 nvw = zeros (k,1);

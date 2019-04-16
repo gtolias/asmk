@@ -8,6 +8,9 @@
 %  aps    separate ap for each query image
 % Notes:
 % 1) ranks starts from 1
+%
+% Authors: G. Tolias, Y. Avrithis, H. Jegou. 2013. 
+%
 function [map, aps] = compute_map (idx, gnd, verbose)
 
 if nargin < 3

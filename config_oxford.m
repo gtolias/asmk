@@ -1,5 +1,8 @@
 % Creates config structure with filenames of data
 % The function optionally takes a path to specify where data is stored
+%
+% Authors: G. Tolias, Y. Avrithis, H. Jegou. 2013. 
+%
 function cfg = config_oxford(datarootdir)
 
 if ~exist('datarootdir')

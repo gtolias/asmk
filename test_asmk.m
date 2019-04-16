@@ -2,7 +2,9 @@
 % To aggregate or not to aggregate: Selective match kernels for image search, ICCV 2013
 % It creates the indexing structure and performs retrieval
 % on Oxford5k for the variant called ASMK* in the paper. 
-
+%
+% Authors: G. Tolias, Y. Avrithis, H. Jegou. 2013. 
+%
 % download yael
 if ~exist('yael') 
   system('wget https://gforge.inria.fr/frs/download.php/file/34218/yael_matlab_linux64_v438.tar.gz');

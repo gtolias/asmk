@@ -4,6 +4,9 @@
 %
 %  X   descriptors
 %  Xm  mean descriptor after root-SIFT and L2 normalization
+%
+% Authors: G. Tolias, Y. Avrithis, H. Jegou. 2013. 
+%
 function [X Xm] = desc_postprocess (X, Xm)
 
 X = single (X);
