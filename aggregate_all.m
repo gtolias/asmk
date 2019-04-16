@@ -16,7 +16,7 @@ cs = [1 cumsum( double (n)) + 1];
 for i = 1:numel(n)
   if ~n(i)
     na(i) = 0;
-    va{i} = int32 ([]);
+    va{i} = uint32 ([]);
     da{i} = zeros (size (d, 1), 0, 'single');
    continue;
   end

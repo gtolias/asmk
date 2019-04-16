@@ -1,10 +1,25 @@
-addpath('../yael/matlab');
+% This script reproduces the results of the paper "Giorgos Tolias and Yannis Avrithis and Herve Jegou,
+% To aggregate or not to aggregate: Selective match kernels for image search, ICCV 2013
+% It creates the indexing structure and performs retrieval
+% on Oxford5k for the variant called ASMK* in the paper. 
+
+% download yael
+if ~exist('yael') 
+  system('wget https://gforge.inria.fr/frs/download.php/file/34218/yael_matlab_linux64_v438.tar.gz');
+  system('mkdir yael');
+  system('tar -C yael/ -zxvf yael_matlab_linux64_v438.tar.gz');
+end
+addpath('yael');
+% download required data
+if ~exist('data') 
+  system('wget -nH --cut-dirs=4 -r -Pdata/ ftp://ftp.irisa.fr/local/texmex/corpus/iccv2013/');
+end
 
 cfg = config_oxford();
 
 % Parameters
 nbits = 128;        % dimension of binary signatures
-ht = 0;             % similarity threshold, possible values [0,nbits/2]
+ht = 0;	            % similarity threshold, possible values [0,nbits/2]
 alpha = 3.0;        % parameter of the selective function sign(u)*u.^alpha
 k = 2^16;           % codebook size
 ma = 5;             % multiple assigned visual words		
@@ -165,4 +180,3 @@ end
 % Compute mean Average Precision (mAP)
 map = compute_map (ranks, gnd);
 fprintf ('* mAP on Oxford5k is %.4f\n', map);
-
