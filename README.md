@@ -24,6 +24,9 @@ reproduce the ASMK* results using DELF descriptors in our CVPR 2018 paper.
 }
 ```
 
+# Python version 
+https://github.com/jenicek/asmk
+
 # Prerequisites
 
 The prerequisites are automatically downloaded when running the main scripts.
